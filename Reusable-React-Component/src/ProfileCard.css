@@ -1,0 +1,111 @@
+/* Layout for the three profile cards */
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual profile card */
+.profile-card {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #dae9f7;
+    border: 1px solid #465575;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #1d1c1c;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile photo */
+.profile-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* Name */
+.profile-card h2 {
+    margin: 0 0 10px;
+    color: #1e1d1d;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Job title and biography */
+.profile-card p {
+    margin: 0 0 10px;
+    color: #474646;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.page-container h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px;
+    color: #335462;
+}
+
+.profile-skills {
+    margin-top: 20px;
+
+}
+
+.profile-skills h3 {
+    font-size: 16px;
+    color: #1e1d1d;
+    margin-bottom: 10px;
+
+}
+
+.profile-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.profile-skills li {
+    background-color: #eee5ff;
+    color: #ac42d3;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width:900px) {
+    .profiles-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width:600px) {
+    .profiles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
